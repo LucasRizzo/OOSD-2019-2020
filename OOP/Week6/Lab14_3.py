@@ -10,4 +10,4 @@ def prompt_open(mode):
             return file
 
 
-prompt_open("r")
+file1 = prompt_open("r")

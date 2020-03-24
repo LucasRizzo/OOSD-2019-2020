@@ -14,6 +14,6 @@ def safe_input(prompt, prompt_type):
 
 
 # Main code
-safe_input(input("Please enter a number: "), int)
-safe_input(input("Please enter a float: "), float)
-safe_input(input("Please ener a string: "), str)
+number = safe_input(input("Please enter a number: "), int)
+floating_point = safe_input(input("Please enter a float: "), float)
+string = safe_input(input("Please enter a string: "), str)

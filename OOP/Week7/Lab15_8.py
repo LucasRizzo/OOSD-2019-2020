@@ -7,7 +7,7 @@ def check(s):
 
 
 # driver code
-sentence = "The quick brown fox jumps over the lazy dog"
+sentence = "The quick brown fox jumps over the lazy"
 if check(sentence):
     print("The string is a pangram")
 else:

@@ -32,28 +32,21 @@ def add_to_dict(word, dict):
 
 
 def create_html(dict):
-    fo = open("output.html", "w")
-    fo.write('<!DOCTYPE html>\
-<html>\
-<head lang="en">\
-<meta charset="UTF-8">\
-<title>Tag Cloud Generator</title>\
-</head>\
-<body>\
-<div style="text-align: center; width: 15%; vertical-align: middle; font-family: arial; color: white; background-color:black; border:1px solid black">')
+    html = '<!DOCTYPE html>\ <html> <head lang="en"> <meta charset="UTF-8"> <title>Tag Cloud Generator</title> </head> <body> <div style="text-align: center; width: 15%; vertical-align: middle; font-family: arial; color: white; background-color:black; border:1px solid black">'
     count = 0
     for key in dict.keys():
-        fo.write('<span style="font-size: ')
-        fo.write(str(dict[key]*10))
-        fo.write('px"> ')
-        fo.write(key)
-        fo.write('</span>')
+        html += '<span style="font-size: '
+        html += str(dict[key]*10)
+        html += 'px"> '
+        html += key
+        html += '</span>'
         count += 1
-        if (count % 4 == 0):
-            fo.write('<br>')
+        if count % 4 == 0:
+            html += '<br>'
 
-
-    fo.write('</div> </body> </html>')
+    html += '</div> </body> </html>'
+    fo = open("output.html", "w")
+    fo.write(html)
 
 # Main
 dict = create_dict()

@@ -22,7 +22,7 @@ while True:
         break
 
 
- # potential user error
+
 line_count_int = 1
 for line_str in input_file:
     if line_count_int == find_line_int:
